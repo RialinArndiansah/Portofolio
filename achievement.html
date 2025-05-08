@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Rialin Ardiansah</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">PORTFOLIO</a>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="education.html">EDUCATION</a></li>
+                    <li><a href="experience.html">EXPERIENCE</a></li>
+                    <li><a href="achievement.html" class="active">ACHIEVEMENT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="section achievement" id="achievement">
+        <div class="container">
+            <h2 class="section-title">My Achievements</h2>
+            <div class="achievement-grid">
+                <div class="achievement-card">
+                    <div class="certificate-img-container">
+                        <img src="src/sertif-himatif.png" alt="HIMATIF Certificate" class="certificate-img" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="achievement-content">
+                        <h3>HIMA Information Technology Certificate</h3>
+                        <p class="issuer">HIMA Information Technology</p>
+                        <p class="date">2023</p>
+                        <p class="text-secondary">Recognition for active participation and contribution in Information Technology Student Association activities.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="certificate-img-container">
+                        <img src="src/sertifikat-oracle.png" alt="Oracle Certificate" class="certificate-img" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Oracle Database Certification</h3>
+                        <p class="issuer">Oracle</p>
+                        <p class="date">2023</p>
+                        <p class="text-secondary">Professional certification in Oracle Database administration and development.</p>
+                    </div>
+                </div>
+
+                <div class="achievement-card">
+                    <div class="certificate-img-container">
+                        <img src="src/setif-aso.png" alt="ASO Certificate" class="certificate-img" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="achievement-content">
+                        <h3>ASOMATIF Certification</h3>
+                        <p class="issuer">ASOMATIF</p>
+                        <p class="date">2024</p>
+                        <p class="text-secondary">Achievement certification for Member of Equipment Division.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox for full-size image view -->
+        <div id="certificateLightbox" class="lightbox">
+            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightboxImage" class="lightbox-img" src="" alt="Certificate Full View">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">PORTFOLIO</a>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <p class="copyright text-secondary">© 2025 Rialin Ardiansah. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="theme-toggle" id="themeToggle">
+        <div class="theme-icon" id="themeIcon">🌙</div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
