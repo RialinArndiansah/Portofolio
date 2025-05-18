@@ -28,31 +28,48 @@ window.onscroll = function() {
     } else {
         header.classList.remove('scrolled');
     }
+
+    // Tampilkan section saat di-scroll
+    document.querySelectorAll('.section').forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (sectionTop < windowHeight * 0.75) {
+            section.classList.add('visible');
+        }
+    });
 };
 
-// Theme Toggle
-const themeToggle = document.getElementById('themeToggle');
-const themeIcon = document.getElementById('themeIcon');
-const body = document.body;
+// Tampilkan section yang terlihat saat halaman dimuat
+document.addEventListener('DOMContentLoaded', function() {
+    // Memastikan semua section terlihat saat halaman dimuat
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.add('visible');
+    });
 
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme) {
-    body.classList.add(currentTheme);
-    if (currentTheme === 'light-theme') {
-        themeIcon.textContent = '☀️';
-    }
-}
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-    if (body.classList.contains('light-theme')) {
-        body.classList.remove('light-theme');
-        themeIcon.textContent = '🌙';
-        localStorage.setItem('theme', '');
-    } else {
-        body.classList.add('light-theme');
-        themeIcon.textContent = '☀️';
-        localStorage.setItem('theme', 'light-theme');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        body.classList.add(currentTheme);
+        if (currentTheme === 'light-theme') {
+            themeIcon.textContent = '☀️';
+        }
     }
+
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('light-theme')) {
+            body.classList.remove('light-theme');
+            themeIcon.textContent = '🌙';
+            localStorage.setItem('theme', '');
+        } else {
+            body.classList.add('light-theme');
+            themeIcon.textContent = '☀️';
+            localStorage.setItem('theme', 'light-theme');
+        }
+    });
 });
 
 // Form Validation (only if form exists)
@@ -144,8 +161,11 @@ function closeLightbox() {
 }
 
 // Close lightbox when clicking outside the image
-document.getElementById('certificateLightbox').addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeLightbox();
-    }
-});
+const certificateLightbox = document.getElementById('certificateLightbox');
+if (certificateLightbox) {
+    certificateLightbox.addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeLightbox();
+        }
+    });
+}

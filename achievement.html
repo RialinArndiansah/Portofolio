@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achievements - Rialin Ardiansah</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
             </nav>
         </div>
     </header>
-    <section class="section achievement" id="achievement">
+    <section class="section achievement visible" id="achievement">
         <div class="container">
             <h2 class="section-title">My Achievements</h2>
             <div class="achievement-grid">
@@ -80,9 +81,9 @@
 
         <!-- Lightbox for full-size image view -->
         <div id="certificateLightbox" class="lightbox">
-            <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+            <button class="close-lightbox" onclick="closeLightbox()" aria-label="Close"><i class="fas fa-times"></i></button>
             <div class="lightbox-content">
-                <img id="lightboxImage" class="lightbox-img" src="" alt="Certificate Full View">
+                <img id="lightboxImage" class="lightbox-img" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Certificate Full View">
             </div>
         </div>
     </section>
